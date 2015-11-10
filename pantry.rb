@@ -1,5 +1,6 @@
 
-inStock.sort = { "bread" => 1, "milk" => 2, "eggs" => 5, "Flour" => 1, }
+
+inStock = { "bread" => 1, "milk" => 2, "eggs" => 5, "Flour" => 1, }
 
 puts "Please select an option."
 puts "Type 'add' if you would like to add an item."
@@ -7,10 +8,9 @@ puts "Type 'edit' if you would like to edit an item."
 puts "Type 'delete' if you would like to delete an item. "
 puts "Type 'display' if you would like a list of all items in your pantry."
 puts "Please only use whole numbers to describe stock levels."
-choice = gets.chomp
+choice = gets.chomp!
 
 case choice
-
 when 'add'
 	puts "What item would you like to add?"
 	item = gets.chomp
@@ -52,6 +52,6 @@ when 'display'
 	inStock.each do |item, stock|
 	puts "#{item}: #{stock}"
 end
-end
+end 
 
 
